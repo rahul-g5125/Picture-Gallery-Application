@@ -1,14 +1,6 @@
-
-
-form {
-    background-color: #ee2d2d;
-    padding: 20px 575px;
-}
-
 input {
     display: inline;
     width: 80%;
-    margin: auto;
 }
 
 p {
@@ -34,6 +26,16 @@ img {
     position: absolute;
     left: 0px;
     right: 0px;
+    top: 120px;
+    margin: 0 !important;
+}
+.form-outer {
+    background-color: #ee2d2d;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    padding: 20px 10rem;
     margin: 0 !important;
 }
 .image-box {
