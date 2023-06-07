@@ -1,0 +1,23 @@
+{
+  "name": "unsplash",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rahul Gandla",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.1.4",
+    "ejs": "^3.1.9",
+    "env": "^0.0.2",
+    "express": "^4.18.2",
+    "https": "^1.0.0",
+    "nodemon": "^2.0.22",
+    "process": "^0.11.10",
+    "request": "^2.88.2",
+    "tailwindcss": "^3.3.2"
+  }
+}

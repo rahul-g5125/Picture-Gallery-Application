@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Unsplash Project</title>
+</head>
+<body>
+    <div class="form-outer">
+        <form action="/" method="post">
+            <div class="form-group">
+            <input class="form-control" type="text" name="search" id="search" placeholder="Search for images">
+            <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+        </form>
+    </div>
+    <div class="container-fluid row grid">       
+        <% if (images.length > 0) { %>
+            <% images.forEach(image => { %>
+                <div class="col-lg-3 image-box">
+                    <img class="img-fluid" src="<%= image.urls.small %>" alt="<%= image.alt_description %>">
+                    
+
+                    <p> <strong>Author:</strong>  <%= image.user.first_name + " " + image.user.last_name %></p>
+
+                    <p><% if (image.description !== null) { %>
+                        <strong>Description: </strong> <%= image.description %>
+                    <% } else if(image.alt_description !== null){%>
+                        <strong>Description: </strong> <%= image.alt_description %>
+                    <% } %> </p>
+
+                    <a href="<%= image.links.download %>">Click here to Download</a>
+                </div>
+            <% }) %>
+            
+        <% } else { %>
+            <p>No images found</p>
+        <% } %>
+    </div>
+
+</body>
+</html>
